@@ -8,7 +8,7 @@
 %\usepackage{subfig}
 
 %% Sets page size and margins
-\usepackage[a4paper,top=2cm,bottom=2cm,left=2cm,right=2cm,marginparwidth=1.75cm]{geometry}
+\usepackage[a4paper,top=1cm,bottom=2cm,left=2cm,right=2cm,marginparwidth=1.75cm]{geometry}
 
 %% Useful packages
 \usepackage{amsmath}
@@ -67,8 +67,7 @@ Assignment 01}
 \begin{document}
 
 \maketitle
-
-GitHub Repository https://github.com/dakshinatharindu/Image-Processing/tree/main/Assignment-01
+GitHub Repository : \url{https://github.com/dakshinatharindu/Image-Processing/blob/main/Assignment-01/190622R_a01.ipynb}
 \section*{Question 01}
 
 The intensity transformation is a way of mapping the intensity values of
@@ -91,8 +90,8 @@ transformed_image = cv.LUT(im, transform)
     
 \begin{figure}[!htb]
     \centering
-    \hspace*{-2cm}
-    \includegraphics[width=1.25\textwidth]{../q1.png}
+
+    \includegraphics[width=\textwidth]{../q1.png}
     \caption{Intensity Iransformation}
 
     \label{figq1}
@@ -124,8 +123,8 @@ white_transformed_image = cv.LUT(im, white_transform)
     \end{lstlisting}
 \begin{figure}[!htb]
     \centering
-    \hspace*{-2cm}
-    \includegraphics[width=1.2\textwidth]{../q2.png}
+
+    \includegraphics[width=\textwidth]{../q2.png}
     \caption{Accentuate White Matter}
     \label{figq2}
 \end{figure}
@@ -175,9 +174,9 @@ corrected_hist = cv.calcHist([LAB_image], [0], None, [256], [0, 256])
 
 \begin{figure}[!htb]
     \centering
-    \hspace*{-3cm}
-    \includegraphics[width=1.3\textwidth]{../q31.png}
-    \caption{}
+
+    \includegraphics[width=\textwidth]{../q31.png}
+    \caption{Histograms}
     \label{figq31}
 \end{figure}
 When we apply gamma
@@ -189,9 +188,9 @@ to the light region. This can be seen in the Figure \ref{figq31}.
 
 \begin{figure}[!htb]
     \centering
-    \includegraphics[width=1.1\textwidth]{../q32.png}
+    \includegraphics[width=0.9\textwidth]{../q32.png}
 
-    \caption{Caption}
+    \caption{Comparison}
     \label{figq32}
 \end{figure}
 
@@ -222,7 +221,7 @@ equalize_hist = cv.calcHist([equalize_img], [0], None, [256], [0, 256])
 \begin{figure}[!htb]
     \centering
 
-    \includegraphics[width=\textwidth]{../q4.png}
+    \includegraphics[width=0.9\textwidth]{../q4.png}
     \caption{Histogram Equalization}
     \label{figq4}
 \end{figure}
@@ -307,7 +306,6 @@ The SSD value is shown at the top of each image. We can observe that
   to Nearest-Neighbor Interpolation. This means Bilinear Interpolation
    approximates the original image better than Nearest-Neighbor
     Interpolation.
-
 
 
 \section*{Question 06}
@@ -400,6 +398,12 @@ Each 3 methods describe above gives the same results. We
        edges of the face in the gradient magnitude image.
 
 \section*{Question 07}
+\subsubsection*{Segmentation}
+The OpenCV grabCut method can be used to segment
+ the images. It can be initialized using 2 ways.
+  Either using a bounding rectangle or using a mask.
+   Since in this image we know the location of the flower,
+    I used the bounding rectangle method. 
 \begin{lstlisting}[language=python]
 img = cv.imread(r"daisy.jpg")
 assert im is not None
@@ -418,15 +422,46 @@ background_img = img*(1 - mask2[:, :, np.newaxis])
 \end{lstlisting}
 \begin{figure}[!htb]
     \centering
-    \hspace*{-1cm}
-    \includegraphics[width=1.1\textwidth]{../q7.png}
-    \caption{Caption}
-    \label{fig:my_label}
+    \includegraphics[width=\textwidth]{../q71.png}
+    \caption{Segmentation}
+    \label{figq71}
 \end{figure}
-
+\subsubsection*{Background Blur}
+To blur the background I used a GaussianBlur method with kernel size
+  = (15, 15). When we apply a filter to the background image, the cut
+   region (black area) also gets some intensity values. If we add this
+    blurred image directly with the foreground image we get some wrong
+     pixel values near the edges of the flower. Therefore, before adding
+      the background image I applied the segment mask to the blurred
+       image to remove the unwanted pixel values at the cut region.
 \begin{lstlisting}[language=python]
-background_blurred_img = cv.GaussianBlur(background_img, (13, 13), 8)
+background_blurred_img = cv.GaussianBlur(background_img, (15, 15), 8)
 enhanced_img = foreground_img + background_blurred_img*(1 - mask2[:, :, np.newaxis])
 \end{lstlisting}
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=0.6\textwidth]{../q72.png}
+    \caption{Background Blurred Image}
+    \label{figq72}
+\end{figure}
+\subsubsection*{Reason for Dark edges}
+Figure \ref{figq73} shows an instant where the Gaussian kernel overlaps on an edge
+ of segmentation. Since almost half of the kernel is in the black region,
+  the average value of this instant is very low. i.e. the calculated
+   intensity value will be more close to the dark region. Therefore,
+    the pixels just beyond the edges of the flower will be darker than
+     other pixels. When we increase the kernel size, this darker area
+      will also increase.
+
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=0.4\textwidth]{../q73.png}
+    \caption{}
+    \label{figq73}
+\end{figure}
+
+
+
 
 \end{document}
