@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.13)  3 MAR 2022 01:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.13)  4 MAR 2022 22:25
 entering extended mode
 **"c:/Users/USER/OneDrive - University of Moratuwa/Academics/Semester 4/EN2550 - Fundamentals of Image Processing and Machine Vision/Image-Processing/Assignment-01/Report/190622R_a01.tex"
 ("c:/Users/USER/OneDrive - University of Moratuwa/Academics/Semester 4/EN2550 - Fundamentals of Image Processing and Machine Vision/Image-Processing/Assignment-01/Report/190622R_a01.tex"
@@ -622,22 +622,22 @@ File: l3backend-pdftex.def 2021-01-09 L3 backend support: PDF output (pdfTeX)
 ) ("c:/Users\USER\OneDrive - University of Moratuwa\Academics\Semester 4\EN2550 - Fundamentals of Image Processing and Machine Vision\Image-Processing\Assignment-01\Report\190622R_a01.aux")
 \openout1 = `190622R_a01.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
  (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/ucs\ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
@@ -650,14 +650,14 @@ File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
 * h-part:(L,W,R)=(56.9055pt, 483.69687pt, 56.9055pt)
-* v-part:(T,H,B)=(85.35826pt, 702.78308pt, 56.9055pt)
+* v-part:(T,H,B)=(56.9055pt, 731.23584pt, 56.9055pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
 * \textwidth=483.69687pt
-* \textheight=702.78308pt
+* \textheight=731.23584pt
 * \oddsidemargin=-15.36449pt
 * \evensidemargin=-15.36449pt
-* \topmargin=-23.91173pt
+* \topmargin=-52.36449pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=10.0pt
@@ -693,9 +693,9 @@ Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
 )
 
-Package todonotes Warning: The length marginparwidth is less than 2cm and will most likely cause issues with the appearance of inserted todonotes. The issue can be solved by adding a line like \setlength {\marginparwidth }{2cm} prior to loading the todonotes package. on input line 66.
+Package todonotes Warning: The length marginparwidth is less than 2cm and will most likely cause issues with the appearance of inserted todonotes. The issue can be solved by adding a line like \setlength {\marginparwidth }{2cm} prior to loading the todonotes package. on input line 67.
 
-Package hyperref Info: Link coloring ON on input line 66.
+Package hyperref Info: Link coloring ON on input line 67.
 (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
  (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
@@ -705,9 +705,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count350
 )
-LaTeX Info: Redefining \ref on input line 66.
-LaTeX Info: Redefining \pageref on input line 66.
-LaTeX Info: Redefining \nameref on input line 66.
+LaTeX Info: Redefining \ref on input line 67.
+LaTeX Info: Redefining \pageref on input line 67.
+LaTeX Info: Redefining \nameref on input line 67.
  ("c:/Users\USER\OneDrive - University of Moratuwa\Academics\Semester 4\EN2550 - Fundamentals of Image Processing and Machine Vision\Image-Processing\Assignment-01\Report\190622R_a01.out") ("c:/Users\USER\OneDrive - University of Moratuwa\Academics\Semester 4\EN2550 - Fundamentals of Image Processing and Machine Vision\Image-Processing\Assignment-01\Report\190622R_a01.out")
 \@outlinefile=\write4
 \openout4 = `190622R_a01.out'.
@@ -723,24 +723,131 @@ LaTeX Info: Redefining \BPBI on input line 129.
 LaTeX Info: Redefining \BHBI on input line 130.
 )
 \c@lstlisting=\count352
- [1
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+)
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 79.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 79.
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
+File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+<../q1.png, id=6, 1734.48pt x 433.62pt>
+File: ../q1.png Graphic file (type png)
+<use ../q1.png>
+Package pdftex.def Info: ../q1.png  used on input line 95.
+(pdftex.def)             Requested size: 604.62108pt x 151.15393pt.
 
-{C:/Users/USER/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] ("c:/Users\USER\OneDrive - University of Moratuwa\Academics\Semester 4\EN2550 - Fundamentals of Image Processing and Machine Vision\Image-Processing\Assignment-01\Report\190622R_a01.aux")
+Overfull \hbox (66.24039pt too wide) in paragraph at lines 94--96
+ []|  [] 
+ []
+
+[1
+
+{C:/Users/USER/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <../q1.png>]
+<../q2.png, id=35, 1734.48pt x 433.62pt>
+File: ../q2.png Graphic file (type png)
+<use ../q2.png>
+Package pdftex.def Info: ../q2.png  used on input line 128.
+(pdftex.def)             Requested size: 580.43475pt x 145.10646pt.
+
+Overfull \hbox (42.05406pt too wide) in paragraph at lines 127--129
+ []|  [] 
+ []
+
+<../q22.png, id=36, 1734.48pt x 433.62pt>
+File: ../q22.png Graphic file (type png)
+<use ../q22.png>
+Package pdftex.def Info: ../q22.png  used on input line 148.
+(pdftex.def)             Requested size: 580.43475pt x 145.10646pt.
+
+Overfull \hbox (42.05406pt too wide) in paragraph at lines 147--149
+ []|  [] 
+ []
+
+[2 <../q2.png> <../q22.png>]
+<../q31.png, id=60, 1734.48pt x 433.62pt>
+File: ../q31.png Graphic file (type png)
+<use ../q31.png>
+Package pdftex.def Info: ../q31.png  used on input line 179.
+(pdftex.def)             Requested size: 628.8074pt x 157.20142pt.
+
+Overfull \hbox (61.97395pt too wide) in paragraph at lines 178--180
+ []|  [] 
+ []
+
+<../q32.png, id=62, 1156.32pt x 361.35pt>
+File: ../q32.png Graphic file (type png)
+<use ../q32.png>
+Package pdftex.def Info: ../q32.png  used on input line 192.
+(pdftex.def)             Requested size: 532.0695pt x 166.26712pt.
+
+Overfull \hbox (48.37263pt too wide) in paragraph at lines 192--193
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 203--209
+
+ []
+
+[3 <../q31.png> <../q32.png>]
+<../q4.png, id=85, 1503.6175pt x 1038.88126pt>
+File: ../q4.png Graphic file (type png)
+<use ../q4.png>
+Package pdftex.def Info: ../q4.png  used on input line 225.
+(pdftex.def)             Requested size: 483.69687pt x 334.19252pt.
+ [4 <../q4.png>]
+<../q5.png, id=109, 1352.05125pt x 846.16125pt>
+File: ../q5.png Graphic file (type png)
+<use ../q5.png>
+Package pdftex.def Info: ../q5.png  used on input line 280.
+(pdftex.def)             Requested size: 483.69687pt x 302.70694pt.
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/ucs\uni-32.def
+File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
+) [5 <../q5.png>]
+<../q61.png, id=143, 1632.0975pt x 368.37625pt>
+File: ../q61.png Graphic file (type png)
+<use ../q61.png>
+Package pdftex.def Info: ../q61.png  used on input line 331.
+(pdftex.def)             Requested size: 483.69687pt x 109.17593pt.
+ [6 <../q61.png>]
+<../q62.png, id=179, 1631.09375pt x 365.365pt>
+File: ../q62.png Graphic file (type png)
+<use ../q62.png>
+Package pdftex.def Info: ../q62.png  used on input line 362.
+(pdftex.def)             Requested size: 483.69687pt x 108.34482pt.
+<../q63.png, id=180, 1635.10875pt x 367.3725pt>
+File: ../q63.png Graphic file (type png)
+<use ../q63.png>
+Package pdftex.def Info: ../q63.png  used on input line 389.
+(pdftex.def)             Requested size: 483.69687pt x 108.67104pt.
+ [7 <../q62.png> <../q63.png>]
+<../q7.png, id=214, 1694.33pt x 577.15625pt>
+File: ../q7.png Graphic file (type png)
+<use ../q7.png>
+Package pdftex.def Info: ../q7.png  used on input line 422.
+(pdftex.def)             Requested size: 532.0695pt x 181.24155pt.
+
+Overfull \hbox (22.14157pt too wide) in paragraph at lines 421--423
+ []|  [] 
+ []
+
+[8 <../q7.png>] ("c:/Users\USER\OneDrive - University of Moratuwa\Academics\Semester 4\EN2550 - Fundamentals of Image Processing and Machine Vision\Image-Processing\Assignment-01\Report\190622R_a01.aux")
 Package rerunfilecheck Info: File `190622R_a01.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 22190 strings out of 479618
- 411299 string characters out of 2865501
- 732556 words of memory out of 3000000
- 38928 multiletter control sequences out of 15000+200000
- 411455 words of font info for 45 fonts, out of 3000000 for 9000
+ 23238 strings out of 479618
+ 423159 string characters out of 2865501
+ 1219869 words of memory out of 3000000
+ 39792 multiletter control sequences out of 15000+200000
+ 414841 words of font info for 52 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,6n,117p,646b,339s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\USER\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\USER\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\USER\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\USER\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk> <C:\Users\USER\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk>
-Output written on "c:/Users\USER\OneDrive - University of Moratuwa\Academics\Semester 4\EN2550 - Fundamentals of Image Processing and Machine Vision\Image-Processing\Assignment-01\Report\190622R_a01.pdf" (1 page, 29719 bytes).
+ 102i,6n,117p,646b,1968s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\USER\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\USER\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0800.pk> <C:\Users\USER\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0500.pk> <C:\Users\USER\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\USER\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\USER\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\USER\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk> <C:\Users\USER\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb>
+Output written on "c:/Users\USER\OneDrive - University of Moratuwa\Academics\Semester 4\EN2550 - Fundamentals of Image Processing and Machine Vision\Image-Processing\Assignment-01\Report\190622R_a01.pdf" (8 pages, 5430403 bytes).
 PDF statistics:
- 105 PDF objects out of 1000 (max. 8388607)
- 3 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 553 PDF objects out of 1000 (max. 8388607)
+ 159 named destinations out of 1000 (max. 500000)
+ 68 words of extra memory for PDF output out of 10000 (max. 10000000)
 
