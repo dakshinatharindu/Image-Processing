@@ -2,6 +2,7 @@
 \usepackage[a4paper,top=1cm,bottom=2cm,left=2cm,right=2cm,marginparwidth=1.75cm]{geometry}
 \usepackage{amsmath}
 \usepackage{graphicx}
+\usepackage{amssymb}
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
 
 \title{\textbf{EN2550 - Fundamentals of Image Processing and Machine Vision}\\
@@ -21,7 +22,7 @@ GitHub Repository : \url{https://github.com/dakshinatharindu/Image-Processing/bl
 Our objective of this function is to robustly fit a circle to our point set. This can be done using RANSAC
 algorithm. Figure 1 shows the code snipped of the RANSAC function.
  
-\subsubsection*{RANSAC Algorithm Explained}
+\subsubsection*{RANSAC Algorithm Explanation}
 \begin{enumerate}
   \item First, we calculate the number of iterations $N$ required to get a better estimation. We choose $N$ 
   so that, with probability $p$, at least one random sample is free from outliers.
@@ -100,7 +101,7 @@ $RANSAC\_circle$ function. Since the sample noise is distributed as zero-mean
 \begin{figure}[!htb]
   \centering
   \includegraphics[width=\textwidth]{images/find_hormo.png}
-  \caption{find\_hormography Code}
+  \caption{find\_hormography Function}
   \label{find_hormography}
 \end{figure}
 
@@ -110,6 +111,50 @@ $RANSAC\_circle$ function. Since the sample noise is distributed as zero-mean
   \caption{Code}
   \label{q2code}
 \end{figure}
+\subsubsection*{Algorithm Explanation}
+\begin{enumerate}
+  \item First, we find the coordinates of the selected points ($Y$) using
+   mousing clicking and find the coordinates of the four corners($X$) of
+    the flag. Then we feed these source points ($X$) and destination points
+     ($Y$) to the $find\_homography$ function as shown in Figure \ref{find_hormography}.
+  \item Although, we only need four correspondences to find the
+   homography matrix, in this function, if we give more than four
+    points it will calculate the homography matrix using the least
+     square approach  ($\because$ this will be required for question 03). This
+      will not be a problem because if we give the exact four
+       correspondences, it will return the exact homography matrix.
+        In the $find\_homography$ function,
+   we put each coordinate into matrix form as shown below.
+   \begin{align*}
+     \begin{pmatrix}
+       \vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots\\
+       x_s^{(i)} & y_s^{(i)} & 1 & 0 & 0 & 0 &-x_d^{(i)}x_s^{(i)} &-x_d^{(i)}y_s^{(i)} & x_d^{(i)}\\
+       0 & 0 & 0 & x_s^{(i)} & y_s^{(i)} & 1 & -y_d^{(i)}x_s^{(i)} &-y_d^{(i)}y_s^{(i)} & y_d^{(i)}\\
+       \vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots
+     \end{pmatrix}
+     \begin{pmatrix}
+       h_{11} \\ h_{12} \\h_{13} \\ h_{21} \\ h_{22} \\ h_{23} \\ h_{31} \\ h_{32} \\ h_{33}
+     \end{pmatrix}&=
+     \begin{pmatrix}
+       \vdots \\ 0 \\ \vdots
+     \end{pmatrix}\\
+   \end{align*}
+   $$Ah=0$$
+   Since $H$ is defined up to a scale value, we can solve
+    this as a Constrained Least
+     Square problem. i.e. $h$ is 
+     the eigenvector associated with the smallest eigenvalue
+      of the matrix $A^TA$. Then we can find the $H$ matrix using $h$ vector.
+    \item After finding the homography matrix, we can use the
+     OpenCV warpPerspective
+      method to warp the flag into selected points.
+       To blend the two images, I have used the OpenCV
+        addWeighted method which will add the two images with
+         a given ratio.
+    \end{enumerate}
+Figure \ref{q2} shows selected points in the order and the resulting
+     image for the UK flag and Sri Lanka flag.
+
 
 \begin{figure}[!htb]
   \centering
