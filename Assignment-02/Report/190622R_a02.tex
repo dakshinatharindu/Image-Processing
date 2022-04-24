@@ -6,6 +6,10 @@
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
 \usepackage{mathtools} 
 \usepackage{extarrows} 
+\usepackage[belowskip=-8pt,aboveskip=5pt]{caption}
+
+\setlength{\intextsep}{10pt plus 2pt minus 2pt}
+%\titlespacing\section{0pt}{6pt plus 0pt minus 0pt}{11pt plus 0pt minus 2pt}
 % \title{\textbf{EN2550 - Fundamentals of Image Processing and Machine Vision}\\
 % Assignment 02}
 \author{Tharindu O.K.D.\\19062R}
@@ -29,6 +33,7 @@ Our objective for this is to robustly fit a circle to our point set.
    Figure \ref{ransac_circle} shows the code snipped
     of the RANSAC function. Approach of this method is shown below.
 \begin{enumerate}
+  \itemsep0em 
   \item First, we calculate the number of iterations $N$ required to get a better estimation. We choose $N$ 
   so that, with probability $p$, at least one random sample is free from outliers.
   It is given by, $N=\frac{\log{(1-p)}}{\log{(1-(1-e)^n)}}$. Here $e$ is outlier
@@ -91,6 +96,7 @@ $RANSAC\_circle$ function. Since the sample noise is distributed as zero-mean
   \caption{Output}
   \label{ransac}
 \end{figure}
+\newpage
 \section*{Question 02}
 
 
@@ -102,6 +108,7 @@ $RANSAC\_circle$ function. Since the sample noise is distributed as zero-mean
 \end{figure}
 The objective of this question is to superimpose the flag into the given background image.
 \begin{enumerate}
+  \itemsep0em 
   \item First, we find the coordinates of the selected points ($Y$) using
    mousing clicking and find the coordinates of the four corners($X$) of
     the flag. Then we feed these source points ($X$) and destination points
@@ -163,7 +170,7 @@ Figure \ref{q2} shows selected points in the order and the resulting
 \end{figure}
 \begin{figure}[!htb]
   \centering
-  \includegraphics[width=\textwidth]{images/stif.png}
+  \includegraphics[width=0.65\textwidth]{images/stif.png}
   \caption{Match SIFT Features}
   \label{sift}
 \end{figure}
@@ -180,6 +187,7 @@ I have used a FLANN-based matcher to match SIFT features rather
   
 To overcome this problem, I have used the following method.
 \begin{enumerate}
+  \itemsep0em 
   \item First I apply a random pre-homography
    transformation to img1. Since we do not need
     any translation, I force it to be zero and
@@ -224,7 +232,18 @@ To overcome this problem, I have used the following method.
     4.9212545e-04 & -3.6542424e-05 &  1.0000000e+00
   \end{pmatrix}
 \end{align*}
-
+As you can see, calculated homography and given homography are almost 
+the same. Therefore we can confirm that this method performs well
+rather than directly matching SIFT features. After finding the warp
+ perspective image, I have used 3 methods to blend the image. First, 
+ I directly add the resultant image to img5 with 50-50\% weight. 
+ As you can see the common area is more highlighted. In the second 
+ method, I cut the perspective of the img1 from img5 and then add 
+ the two. This gives a better result but we can still see the seams 
+ of the joining lines. Lastly, rather than directly cutting the 
+ perspective, I applied a distance transformed mask to the resultant 
+ image and then add the two images. You can see this gives a better 
+ result than the other two methods.
 
 
 
