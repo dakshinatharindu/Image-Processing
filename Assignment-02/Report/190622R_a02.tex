@@ -31,7 +31,7 @@ Our objective for this is to robustly fit a circle to our point set.
  This can be done using the RANSAC algorithm to find the best inlier
   set and then fit a circle to this inlier set.
    Figure \ref{ransac_circle} shows the code snipped
-    of the RANSAC function. Approach of this method is shown below.
+    of this method. Steps for the RANSAC algorithm is described below.
 \begin{enumerate}
   \itemsep0em 
   \item First, we calculate the number of iterations $N$ required to get a better estimation. We choose $N$ 
@@ -39,7 +39,7 @@ Our objective for this is to robustly fit a circle to our point set.
   It is given by, $N=\frac{\log{(1-p)}}{\log{(1-(1-e)^n)}}$. Here $e$ is outlier
   ratio and $n$ is a number of points. Here I took $e=0.5$ and $p=0.99$ so 
   that 50\% of points will fall into inliers with a 99\% probability.
-  \item We randomly select 3 points from the given data set. Then we calculate the fitting
+  \item Then randomly select 3 points from the given data set. Then calculate the fitting
    circle using the cartesian equation of the circle $(x-a)^2+(y-b)^2=r^2$. Substituting
     3 point coordinates and putting it into matrix form, we get
    \begin{align*}
@@ -59,15 +59,15 @@ Our objective for this is to robustly fit a circle to our point set.
    Then we can find center coordinates $(a, b)$ and radius$(r)$ by solving above matrix equation.
    \item Then determine the inlier set 
    $=\{(x_i,y_i)\in points \text{ s.t }|\sqrt{(x_i-a)^2+(y_i-b)^2}-r|<threshold\}$
-   \item If $|inliers|>|max\_inliers|$, we select it as the best estimate. Go to step 2
+   \item If $|inliers|>|max\_inliers|$, we select it as the best estimate. Then go to step 2
    until iterate N times.
   \end{enumerate}
-First, we get the parameters of the best fitting circle using the above 
-$RANSAC\_circle$ function. Since the sample noise is distributed as zero-mean
- Gaussian, we pass the threshold value as $1.96\sigma$ so that will give
-  a $\approx95\%$ probability of capturing all inliers. After
+We get the parameters of the best fitting circle using the above 
+\verb |RANSAC_circle| function. Since the sample noise is distributed as zero-mean
+ Gaussian, I pass the threshold value as $1.96\sigma$ so that will give
+  a $\sim 95\%$ probability of capturing all inliers. After
    finding the best inliers, we find the best fitting circle for
-    those inliers using the Least Square approach as follows.
+    those inliers using the Least Square approach by putting all inlier points to below matrix equation.
     \begin{align*}
       \begin{pmatrix}
         x_1 & y_1 & 1\\
@@ -87,7 +87,7 @@ $RANSAC\_circle$ function. Since the sample noise is distributed as zero-mean
       PB&=Q\\
       B&=(P^T P)^{-1}P^T Q
     \end{align*}
-    Using the B matrix, we can find
+    Here $(a_0,b_0)$ is the center coordinates and $r_0^2=a_0^2+b_0^2+c$. Using the B matrix, we can find
      $a_0, b_0$, and $r_0$ which are the parameters of the best-fitting
       circle.
 \begin{figure}[!htb]
@@ -112,14 +112,8 @@ The objective of this question is to superimpose the flag into the given backgro
   \item First, we find the coordinates of the selected points ($Y$) using
    mousing clicking and find the coordinates of the four corners($X$) of
     the flag. Then we feed these source points ($X$) and destination points
-     ($Y$) to the $find\_homography$ function as shown in Figure \ref{q2code}.
-  \item Although, we only need four correspondences to find the
-   homography matrix, in this function, if we give more than four
-    points it will calculate the homography matrix using the least
-     square approach  ($\because$ this will be required for question 03). This
-      will not be a problem because if we give the exact four
-       correspondences, it will return the exact homography matrix.
-        In the $find\_homography$ function,
+     ($Y$) to the \verb|find_homography| function as shown in Figure \ref{q2code}.
+  \item In the $find\_homography$ function,
    we put each coordinate into matrix form as shown below.
    \begin{align*}
      \begin{pmatrix}
@@ -141,6 +135,12 @@ The objective of this question is to superimpose the flag into the given backgro
      Square problem. i.e. $h$ is 
      the eigenvector associated with the smallest eigenvalue
       of the matrix $A^TA$. Then we can find the $H$ matrix using $h$ vector.
+      Although, we only need four correspondences to find the
+   homography matrix, in this function, if we give more than four
+    points it will calculate the homography matrix using the least
+     square approach  ($\because$ this will be required for question 03). This
+      will not be a problem because if we give the exact four
+       correspondences, it will return the exact homography matrix.
     \item After finding the homography matrix, we can use the
      OpenCV warpPerspective
       method to warp the flag into selected points.
@@ -170,7 +170,7 @@ Figure \ref{q2} shows selected points in the order and the resulting
 \end{figure}
 \begin{figure}[!htb]
   \centering
-  \includegraphics[width=0.65\textwidth]{images/stif.png}
+  \includegraphics[width=0.7\textwidth]{images/stif.png}
   \caption{Match SIFT Features}
   \label{sift}
 \end{figure}
@@ -189,19 +189,19 @@ To overcome this problem, I have used the following method.
 \begin{enumerate}
   \itemsep0em 
   \item First I apply a random pre-homography
-   transformation to img1. Since we do not need
-    any translation, I force it to be zero and
+   transformation to img1 so that it will give more matches. Since we do not need
+    any translation, I force $t_x$ and $t_y$ to be zero and
      also force vector $v$ of the homography matrix to be zero.
   \item Apply the warp perspective transformation to img1 with
    the above random pre-homography transformation. Then match
     the SIFT features of the resultant pre-transformed image 
     and img5.
-  \item Then apply the ransac\_homography function with these matching
+  \item Then apply the \verb|ransac_homography| function with these matching
    points. It first randomly picks 4 correspondences and finds the
     corresponding homography matrix using the find\_homography
      function defined in question 02. Then apply the homography
-      to each source point and calculate the vector norm with
-       the destination point. If the norm value is less than
+      to each source point and calculate the vector norm of
+       the difference between result and destination point. If the norm value is less than
         the threshold value, we append this to the inlier set.
          After iterating 100 times, it returns the best homography
           matrix with inliers. I constrained the iteration time to 
@@ -209,7 +209,7 @@ To overcome this problem, I have used the following method.
            any matches.
   \item Repeat the above 3 steps until we find the pre-homography
    which gives more than 50 inliers. Then calculate the best fitting
-    homography using the find\_homography function 
+    homography using these inliers by applying to \verb|ransac_homography| function 
     (As mentioned in question 02, this function is capable
      of finding homography using the least square method).
   \item After finding the best homography
@@ -243,7 +243,7 @@ rather than directly matching SIFT features. After finding the warp
  of the joining lines. Lastly, rather than directly cutting the 
  perspective, I applied a distance transformed mask to the resultant 
  image and then add the two images. You can see this gives a better 
- result than the other two methods.
+ result than the other two methods. (3 blending functions can be found in GitHub repository)
 
 
 

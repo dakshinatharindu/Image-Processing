@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.13)  24 APR 2022 23:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.13)  25 APR 2022 00:48
 entering extended mode
 **"c:/Users/USER/OneDrive - University of Moratuwa/Academics/Semester 4/EN2550 - Fundamentals of Image Processing and Machine Vision/Image-Processing/Assignment-02/Report/190622R_a02.tex"
 ("c:/Users/USER/OneDrive - University of Moratuwa/Academics/Semester 4/EN2550 - Fundamentals of Image Processing and Machine Vision/Image-Processing/Assignment-02/Report/190622R_a02.tex"
@@ -383,7 +383,7 @@ Package pdftex.def Info: images/ransac.png  used on input line 95.
  [1
 
 {C:/Users/USER/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <c:/Users/USER/OneDrive - University of Moratuwa/Academics/Semester 4/EN2550 - Fundamentals of Image Processing and Machine Vision/Image-Processing/Assignment-02/Report/images/ransac_circle.png>]
-<images/q2code.png, id=30, 1812.7725pt x 730.98094pt>
+<images/q2code.png, id=31, 1812.7725pt x 730.98094pt>
 File: images/q2code.png Graphic file (type png)
 <use images/q2code.png>
 Package pdftex.def Info: images/q2code.png  used on input line 105.
@@ -403,9 +403,9 @@ Package pdftex.def Info: images/q3code.png  used on input line 167.
 File: images/stif.png Graphic file (type png)
 <use images/stif.png>
 Package pdftex.def Info: images/stif.png  used on input line 173.
-(pdftex.def)             Requested size: 314.40001pt x 125.7527pt.
+(pdftex.def)             Requested size: 338.58632pt x 135.42749pt.
  [3 <c:/Users/USER/OneDrive - University of Moratuwa/Academics/Semester 4/EN2550 - Fundamentals of Image Processing and Machine Vision/Image-Processing/Assignment-02/Report/images/q22.png> <c:/Users/USER/OneDrive - University of Moratuwa/Academics/Semester 4/EN2550 - Fundamentals of Image Processing and Machine Vision/Image-Processing/Assignment-02/Report/images/q3code.png> <c:/Users/USER/OneDrive - University of Moratuwa/Academics/Semester 4/EN2550 - Fundamentals of Image Processing and Machine Vision/Image-Processing/Assignment-02/Report/images/stif.png (PNG copy)>]
-<images/q3.png, id=60, 1117.17375pt x 571.13374pt>
+<images/q3.png, id=61, 1117.17375pt x 571.13374pt>
 File: images/q3.png Graphic file (type png)
 <use images/q3.png>
 Package pdftex.def Info: images/q3.png  used on input line 256.
@@ -415,17 +415,17 @@ Package rerunfilecheck Info: File `190622R_a02.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 8639 strings out of 479618
- 139779 string characters out of 2865501
- 454391 words of memory out of 3000000
- 25649 multiletter control sequences out of 15000+200000
- 406042 words of font info for 38 fonts, out of 3000000 for 9000
+ 8642 strings out of 479618
+ 139809 string characters out of 2865501
+ 455391 words of memory out of 3000000
+ 25651 multiletter control sequences out of 15000+200000
+ 406210 words of font info for 39 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,15n,74p,398b,417s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on "c:/Users\USER\OneDrive - University of Moratuwa\Academics\Semester 4\EN2550 - Fundamentals of Image Processing and Machine Vision\Image-Processing\Assignment-02\Report\190622R_a02.pdf" (4 pages, 4616818 bytes).
+ 71i,15n,74p,398b,419s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on "c:/Users\USER\OneDrive - University of Moratuwa\Academics\Semester 4\EN2550 - Fundamentals of Image Processing and Machine Vision\Image-Processing\Assignment-02\Report\190622R_a02.pdf" (4 pages, 4629619 bytes).
 PDF statistics:
- 117 PDF objects out of 1000 (max. 8388607)
+ 121 PDF objects out of 1000 (max. 8388607)
  27 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
