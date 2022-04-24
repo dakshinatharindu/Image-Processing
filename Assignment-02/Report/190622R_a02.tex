@@ -4,25 +4,30 @@
 \usepackage{graphicx}
 \usepackage{amssymb}
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
-
-\title{\textbf{EN2550 - Fundamentals of Image Processing and Machine Vision}\\
-Assignment 02}
+\usepackage{mathtools} 
+\usepackage{extarrows} 
+% \title{\textbf{EN2550 - Fundamentals of Image Processing and Machine Vision}\\
+% Assignment 02}
 \author{Tharindu O.K.D.\\19062R}
 \begin{document}
-\maketitle
-GitHub Repository : \url{https://github.com/dakshinatharindu/Image-Processing/blob/main/Assignment-02/190622R_a02.ipynb}
+%\maketitle
+\begin{center}
+  \textbf{Tharindu O.K.D.\\190622R}\\
+  \href{https://github.com/dakshinatharindu/Image-Processing/blob/main/Assignment-02/190622R_a02.ipynb}{GitHub Repository (click here)} 
+\end{center}
 
 \section*{Question 01}
 \begin{figure}[!htb]
     \centering
     \includegraphics[width=\textwidth]{images/ransac_circle.png}
-    \caption{$RANSAC\_circle$ function}
+    \caption{Question 01 Code}
     \label{ransac_circle}
 \end{figure}
-Our objective of this function is to robustly fit a circle to our point set. This can be done using RANSAC
-algorithm. Figure 1 shows the code snipped of the RANSAC function.
- 
-\subsubsection*{RANSAC Algorithm Explanation}
+Our objective for this is to robustly fit a circle to our point set.
+ This can be done using the RANSAC algorithm to find the best inlier
+  set and then fit a circle to this inlier set.
+   Figure \ref{ransac_circle} shows the code snipped
+    of the RANSAC function. Approach of this method is shown below.
 \begin{enumerate}
   \item First, we calculate the number of iterations $N$ required to get a better estimation. We choose $N$ 
   so that, with probability $p$, at least one random sample is free from outliers.
@@ -30,8 +35,8 @@ algorithm. Figure 1 shows the code snipped of the RANSAC function.
   ratio and $n$ is a number of points. Here I took $e=0.5$ and $p=0.99$ so 
   that 50\% of points will fall into inliers with a 99\% probability.
   \item We randomly select 3 points from the given data set. Then we calculate the fitting
-   circle using these 3 points as follows.
-   $$(x-a)^2+(y-b)^2=r^2$$substituting 3 point coordinates and putting it into matrix form, we get
+   circle using the cartesian equation of the circle $(x-a)^2+(y-b)^2=r^2$. Substituting
+    3 point coordinates and putting it into matrix form, we get
    \begin{align*}
      \begin{pmatrix}
        x_2-x_1 & y_2-y_1\\
@@ -44,25 +49,14 @@ algorithm. Figure 1 shows the code snipped of the RANSAC function.
      \begin{pmatrix}
       x_2^2-x_1^2 & y_2^2-y_1^2\\
       x_3^2-x_2^2 & y_3^2-y_2^2
-    \end{pmatrix}\\
-    AC&=B\\
-    C&=A^{-1}B
+    \end{pmatrix}
    \end{align*}
-   Then we can find center coordinates and radius using the $C$ matrix.
+   Then we can find center coordinates $(a, b)$ and radius$(r)$ by solving above matrix equation.
    \item Then determine the inlier set 
-   $$inliers=\{(x_i,y_i)\in points \text{ such that }|\sqrt{(x_i-a)^2+(y_i-b)^2}-r|<threshold\}$$
+   $=\{(x_i,y_i)\in points \text{ s.t }|\sqrt{(x_i-a)^2+(y_i-b)^2}-r|<threshold\}$
    \item If $|inliers|>|max\_inliers|$, we select it as the best estimate. Go to step 2
    until iterate N times.
   \end{enumerate}
-
-  \subsubsection*{Finding Best Fitting Circle}
-
-\begin{figure}[!htb]
-  \centering
-  \includegraphics[width=\textwidth]{images/best_fit.png}
-  \caption{Finding Best Fitting Circle}
-  \label{bestfit}
-\end{figure}
 First, we get the parameters of the best fitting circle using the above 
 $RANSAC\_circle$ function. Since the sample noise is distributed as zero-mean
  Gaussian, we pass the threshold value as $1.96\sigma$ so that will give
@@ -93,30 +87,25 @@ $RANSAC\_circle$ function. Since the sample noise is distributed as zero-mean
       circle.
 \begin{figure}[!htb]
   \centering
-  \includegraphics[width=0.5\textwidth]{images/ransac.png}
+  \includegraphics[width=0.4\textwidth]{images/ransac.png}
   \caption{Output}
   \label{ransac}
 \end{figure}
 \section*{Question 02}
-\begin{figure}[!htb]
-  \centering
-  \includegraphics[width=\textwidth]{images/find_hormo.png}
-  \caption{find\_hormography Function}
-  \label{find_hormography}
-\end{figure}
+
 
 \begin{figure}[!htb]
   \centering
   \includegraphics[width=\textwidth]{images/q2code.png}
-  \caption{Code}
+  \caption{Question 02 Code}
   \label{q2code}
 \end{figure}
-\subsubsection*{Algorithm Explanation}
+The objective of this question is to superimpose the flag into the given background image.
 \begin{enumerate}
   \item First, we find the coordinates of the selected points ($Y$) using
    mousing clicking and find the coordinates of the four corners($X$) of
     the flag. Then we feed these source points ($X$) and destination points
-     ($Y$) to the $find\_homography$ function as shown in Figure \ref{find_hormography}.
+     ($Y$) to the $find\_homography$ function as shown in Figure \ref{q2code}.
   \item Although, we only need four correspondences to find the
    homography matrix, in this function, if we give more than four
     points it will calculate the homography matrix using the least
@@ -161,5 +150,92 @@ Figure \ref{q2} shows selected points in the order and the resulting
   \includegraphics[width=\textwidth]{images/q22.png}
   \caption{Output}
   \label{q2}
+\end{figure}
+
+
+\section*{Question 03}
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=\textwidth]{images/q3code.png}
+  \caption{Code}
+  \label{q3code}
+\end{figure}
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=\textwidth]{images/stif.png}
+  \caption{Match SIFT Features}
+  \label{sift}
+\end{figure}
+I have used a FLANN-based matcher to match SIFT features rather
+ than using a Brutal-Force matcher because it gives very accurate
+  and more matches. You can see that in Figure \ref{sift},  even though we
+   used the FLANN-based matcher, we only get a fewer number of SIFT
+    matches and lots of them are incorrect. This is happen because
+     img5 is taken more parallel to the wall. Therefore, the img5
+      is more compact in the horizontal direction than img1.
+       Therefore, lots of features are missed and incorrect.
+        So, if we directly calculate the homography using these 
+        matches, we will get a wrong homography matrix.
+  
+To overcome this problem, I have used the following method.
+\begin{enumerate}
+  \item First I apply a random pre-homography
+   transformation to img1. Since we do not need
+    any translation, I force it to be zero and
+     also force vector $v$ of the homography matrix to be zero.
+  \item Apply the warp perspective transformation to img1 with
+   the above random pre-homography transformation. Then match
+    the SIFT features of the resultant pre-transformed image 
+    and img5.
+  \item Then apply the ransac\_homography function with these matching
+   points. It first randomly picks 4 correspondences and finds the
+    corresponding homography matrix using the find\_homography
+     function defined in question 02. Then apply the homography
+      to each source point and calculate the vector norm with
+       the destination point. If the norm value is less than
+        the threshold value, we append this to the inlier set.
+         After iterating 100 times, it returns the best homography
+          matrix with inliers. I constrained the iteration time to 
+          100 because some random warp perspective may not have
+           any matches.
+  \item Repeat the above 3 steps until we find the pre-homography
+   which gives more than 50 inliers. Then calculate the best fitting
+    homography using the find\_homography function 
+    (As mentioned in question 02, this function is capable
+     of finding homography using the least square method).
+  \item After finding the best homography
+   for the pre-transformed image to img5,
+    we can calculate the effective homography using
+     the above pre-homography and calculated homography.
+     $$img1 \xrightarrow{H_{21}} pre\_transformed\_image \xrightarrow{H_{32}} img5$$
+     $$img1 \xrightarrow{H_{31}=H_{32}H_{21}}  img5$$
+\end{enumerate}
+\begin{align*}
+  calculatedHomography&=
+  \begin{pmatrix}
+     6.14979996e-01&  5.93985823e-02 & 2.21696291e+02\\
+     2.15344442e-01  &1.15345300e+00 &-2.28382302e+01\\
+  4.74622983e-04 &-4.59124680e-05&  1.00000000e+00
+  \end{pmatrix} \\ givenHomography&=
+  \begin{pmatrix}
+    6.2544644e-01 &  5.7759174e-02 &  2.2201217e+02\\
+    2.2240536e-01 &  1.1652147e+00 & -2.5605611e+01\\
+    4.9212545e-04 & -3.6542424e-05 &  1.0000000e+00
+  \end{pmatrix}
+\end{align*}
+
+
+
+
+
+
+
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=\textwidth]{images/q3.png}
+  \caption{Output}
+  \label{q3}
 \end{figure}
 \end{document}
